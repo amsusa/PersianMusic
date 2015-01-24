@@ -1,0 +1,73 @@
+<com.charbgr.BlurNavigationDrawer.v7.BlurDrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+
+    <!-- As the main content view, the view below consumes the entire
+         space available using match_parent in both dimensions. -->
+    <LinearLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="100"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/container"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:gravity="top"
+            android:layout_weight="100">
+
+            <com.viewpagerindicator.TitlePageIndicator
+                android:id="@+id/titlepageindicator"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent" />
+
+            <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/pager"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/titlepageindicator" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <!-- android:layout_gravity="start" tells DrawerLayout ttreat
+         this as a sliding drawer on the left side for left-to-right
+         languages and on the right side for right-to-left languages.
+         If you're not building against API 17 or higher, use
+         android:layout_gravity="left" instead. -->
+    <!-- The drawer is given a fixed width in dp and extends the full height of
+         the container. -->
+
+    <LinearLayout
+        android:id="@+id/navigation_drawer"
+        android:layout_width="150dp"
+        android:orientation="vertical"
+        android:background="#ffffff"
+        android:layout_gravity="start"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/left_drawer_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:choiceMode="singleChoice"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp"
+            tools:listitem=""
+            android:padding="0dp"
+            android:layout_below="@+id/txt_Name"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="75" />
+    </LinearLayout>
+
+
+</com.charbgr.BlurNavigationDrawer.v7.BlurDrawerLayout>
+
