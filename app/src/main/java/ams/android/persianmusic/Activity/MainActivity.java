@@ -127,6 +127,8 @@ public class MainActivity extends ActionBarActivity {
 
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
 
+
+
             viewPager = (ViewPager) rootView.findViewById(R.id.pager);
             // Pass results to ViewPagerAdapter Class
             adapter = new ViewPagerAdapter(getActivity(), pages);

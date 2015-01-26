@@ -47,6 +47,9 @@ public class ViewPagerAdapter extends PagerAdapter {
         View itemView = null;
         itemView = inflater.inflate(R.layout.pager_1, container, false);
 
+
+
+
 //        switch (position) {
 //            case 0:
 //                //itemView = inflater.inflate(R.layout.item_viewpager1, container, false);
